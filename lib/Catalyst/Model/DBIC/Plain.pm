@@ -1,10 +1,10 @@
 package Catalyst::Model::DBIC::Plain;
 
 use strict;
-use base qw/Catalyst::Base DBIx::Class::Schema/;
+use base qw/Catalyst::Model DBIx::Class::Schema/;
 use NEXT;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
