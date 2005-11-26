@@ -4,7 +4,7 @@ use strict;
 use base qw/Catalyst::Model DBIx::Class::Schema/;
 use NEXT;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -63,10 +63,6 @@ sub new {
 =head1 SEE ALSO
 
 L<Catalyst>, L<DBIx::Class> 
-
-=head1 TODO
-
-Write real tests.
 
 =head1 AUTHOR
 

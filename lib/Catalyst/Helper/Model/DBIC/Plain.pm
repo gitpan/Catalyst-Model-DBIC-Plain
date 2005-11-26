@@ -4,7 +4,7 @@ use strict;
 
 =head1 NAME
 
-Catalyst::Helper::Model::DBIC::Plain - Helper for DBIC Plain Model
+Catalyst::Helper::Model::DBIC::Plain - Helper for DBIC Plain Models
 
 =head1 SYNOPSIS
 
@@ -12,7 +12,7 @@ Catalyst::Helper::Model::DBIC::Plain - Helper for DBIC Plain Model
 
 =head1 DESCRIPTION
 
-Helper for the DBIC Plain Model.
+Helper for the DBIC Plain Models.
 
 =head2 METHODS
 
@@ -24,7 +24,7 @@ sub mk_compclass {
     my ( $self, $helper, $dsn, $user, $pass ) = @_;
     $helper->{dsn}  = $dsn  || '';
     $helper->{user} = $user || '';
-    $helper->{pass} = $pass || '';    
+    $helper->{pass} = $pass || '';
     my $file = $helper->{file};
     $helper->render_file( 'compclass', $file );
 }
@@ -44,8 +44,8 @@ Andy Grundman
 
 =head1 LICENSE
 
-This library is free software . You can redistribute it and/or modify
-it under the same terms as perl itself.
+This library is free software, you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 
@@ -63,7 +63,12 @@ my @conn_info = (
     '[% dsn %]',
     '[% user %]',
     '[% pass %]',
-    { RaiseError => 1, PrintError => 0, ShowErrorStatement => 1, TraceLevel => 0 }
+    {
+        RaiseError         => 1,
+        PrintError         => 0,
+        ShowErrorStatement => 1,
+        TraceLevel         => 0
+    }
 );
 
 __PACKAGE__->load_classes;
@@ -71,7 +76,7 @@ __PACKAGE__->compose_connection( __PACKAGE__, @conn_info );
 
 =head1 NAME
 
-[% class %] - DBIC Plain Model Component
+[% class %] - Catalyst DBIC Plain Model
 
 =head1 SYNOPSIS
 
@@ -79,7 +84,7 @@ See L<[% app %]>
 
 =head1 DESCRIPTION
 
-DBIC Plain Model Component.
+Catalyst DBIC Plain View.
 
 =head1 AUTHOR
 
@@ -87,10 +92,9 @@ DBIC Plain Model Component.
 
 =head1 LICENSE
 
-This library is free software . You can redistribute it and/or modify
-it under the same terms as perl itself.
+This library is free software, you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 
 1;
-
